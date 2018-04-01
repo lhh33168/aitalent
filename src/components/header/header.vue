@@ -9,7 +9,7 @@
 				</div>	
 				<div class="collapse">
 					<ul class="navbar-list">
-						<li  v-for="(item,index) in tabList" :class="{active:index == tabIndex}" @click="changeSelect(index,item.toHref)" @mouseenter="changeSelect1(index,item.toHref)"   >
+						<li  v-for="(item,index) in tabList" :class="{active:index == tabIndex}" @click="changeSelect(index,item.toHref)" @mouseenter="changeSelect1(index,item.toHref)"   @mouseleave="changeSelect2(index,item.toHref)" ref="tab">
 							<!-- <el-button v-popover:popover1 class="nav-item">{{item.name}}</el-button> -->
 							 <span class="nav-item">{{item.name}}</span> 
 							 <transition name="fade">
@@ -106,14 +106,32 @@
 			},
 			changeSelect1(index,name){
 				/*this.$store.commit('CHANGETAB',index);*/
+				for(var i=0;i<4;i++){
+					this.$refs.tab[i].classList.remove("active");
+				}
 				this.tabIndex = index;
-				window.sessionStorage.setItem('userInfo', JSON.stringify(
-			            {
-			               'tabIndex': index,
-			            }
-		          ));
 				this.$store.state.footer.footer = true;
+				this.$refs.tab[index].classList.add("active");
+				if(name=="personCenter"){
+					// this.animate(this.$refs.mybox,{top:10}) 
+					this.show = true
+				}
 				
+			},
+			changeSelect2(index,name){
+				/*this.$store.commit('CHANGETAB',index);*/
+				var userJsonStr = sessionStorage.getItem('userInfo');
+				for(var i=0;i<4;i++){
+					this.$refs.tab[i].classList.remove("active");
+				}
+		        if(userJsonStr){
+		              var  presentTabIndex = JSON.parse(userJsonStr);
+		              this.$refs.tab[presentTabIndex.tabIndex].classList.add("active");
+		        }else{
+		        	  this.$refs.tab[0].classList.add("active");
+		        }
+				this.$store.state.footer.footer = true;
+				//console.log(this.$refs.tab[index],index,this.tabIndex)
 				if(name=="personCenter"){
 					// this.animate(this.$refs.mybox,{top:10}) 
 					this.show = true
