@@ -19,12 +19,12 @@ const router = new VueRouter({
 		redirect:'/message',
 		children:[
                 {path:'/message',component:MessageComponent},
-                {path:'/login',name: 'login',component: LoginComponent},
-                {path:'/register',name: 'register',component: RegisterComponent},
                 {path:'/personCenter',name: 'personCenter',component: CenterComponent},
                 {path:'/kpin',name: 'kpin',component: KpinComponent}
-            ]
-	}]
+            ]},
+        {path:'/login',name: 'login',component: LoginComponent},
+        {path:'/register',name: 'register',component: RegisterComponent}
+	]
 })
 
 // 对将要进入的路由进行权判断

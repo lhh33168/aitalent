@@ -1,5 +1,6 @@
 <template>
 	<div class="loginContent">
+		<Header-top></Header-top>
 		<div class="mail_main">
 			 <div class="mail_register">
 				<h3 v-if="$store.state.login.register_type == 0">找回/修改密码</h3>
@@ -23,6 +24,7 @@
 </template>
 
 <script>
+	import HeaderTop from '../header/header.vue';
 	export default{
 		data(){
 			return{
@@ -31,6 +33,9 @@
 					password:''
 				}
 			}
+		},
+		components: {
+			HeaderTop
 		},
 		beforeMount(){
 			if(this.$store.state.header.tabIndexFoot==null){
@@ -53,16 +58,12 @@
 	.loginContent{
 		position: relative;
 		width: 100%;
-		height: 45rem;
-		background: url('../../assets/imgs/icon/bg_log_city.jpg') no-repeat;
-		background-position:center;
-		background-size:corver;
-		margin-top: 4rem;
+		height: 100%;
+		margin-top: 80px;
 	}
 	
 	.mail_main{
 		position: relative;
-		width: 60rem;
 		margin: 0 20%;
 		top: 3.5rem;
 	}

@@ -1,5 +1,6 @@
 <template>
 	<div class="loginContent">
+		<Header-top></Header-top>
 		<div class="mail_main">
 			 <div class="mail_register">
 				<h3>账号密码登录</h3>
@@ -26,7 +27,8 @@
 </template>
 
 <script type="text/javascript">
-	import './login.scss'
+	import './login.scss';
+	import HeaderTop from '../header/header.vue';
 	// import { mapGetters, mapActions } from 'vuex'
 	// import $ from 'jquery'
 
@@ -36,6 +38,9 @@
 				account:'',
 				password:''	
 			}
+		},
+		components: {
+			HeaderTop
 		},
 		mounted(){
             var loginContent = document.querySelector('.loginContent');
