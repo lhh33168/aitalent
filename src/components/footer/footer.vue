@@ -87,7 +87,7 @@
 		width: 100%;
 		height: 10.5rem;
 		font-size: 0.9rem;
-		padding: 0.5rem 0 0.5rem 1rem;
+		padding: 0.5rem 0;
 		border-top:1px solid #454545;
 		border-bottom: 1px solid #454545;
 	}
@@ -101,6 +101,9 @@
 		height: 5.2rem;
 		padding: 0.2rem 1.5rem;
 		text-align: center;
+	}
+	.main_list:nth-child(1){
+		padding-left:0;
 	}
 	.main_list .title{
 		color: #FFFFFF;

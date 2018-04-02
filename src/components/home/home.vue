@@ -4,7 +4,7 @@
 		
 		<div><router-view></router-view></div>
 		
-		<Footer-bom v-if="$store.state.footer.footer"></Footer-bom>
+		<Footer-bom></Footer-bom>
 	</div>
 </template>
 

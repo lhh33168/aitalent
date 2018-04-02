@@ -19,14 +19,14 @@ const router = new VueRouter({
 		component: HomeComponent,
 		redirect:'/message',
 		children:[
-                {path:'/message',name: 'message',component:MessageComponent},
-                {path:'/login',name: 'login',component: LoginComponent},
-                {path:'/register',name: 'register',component: RegisterComponent},
+                {path:'/message',component:MessageComponent},
                 {path:'/personCenter',name: 'personCenter',component: CenterComponent},
                 {path:'/kpin',name: 'kpin',component: KpinComponent},
                 {path:'/artDetail',name: 'artDetail',component: ArtDetailComponent}
-            ]
-	}]
+            ]},
+        {path:'/login',name: 'login',component: LoginComponent},
+        {path:'/register',name: 'register',component: RegisterComponent}
+	]
 })
 
 // 对将要进入的路由进行权判断
