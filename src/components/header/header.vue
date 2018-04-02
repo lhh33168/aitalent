@@ -134,7 +134,7 @@
 			            }
 		          ));
 				this.$store.state.header.tabIndexFoot = this.tabIndex;
-				this.$router.push({ path: '/register' })
+				this.$router.push({ path: 'register' })
 			},
 			login:function(){
 				this.$store.state.login.register_type = 1;
@@ -146,7 +146,7 @@
 			            }
 		          ));
 				this.$store.state.header.tabIndexFoot = this.tabIndex;
-				this.$router.push({ path: '/login' })
+				this.$router.push({ path: 'login' })
 			}	
 		}
 	}

@@ -28,38 +28,38 @@
 			</div>
 			
 			<div class="share_content">
-				<p><button class="share_like"><img src="../../img/icon_good.png" /></button></p>
+				<p><button class="share_like"><img src="../../assets/imgs/icon/icon_good.png" /></button></p>
 				<div class="share_type">
-					<img src="../../img/icon_weibo.png" />
-					<img src="../../img/icon_qq.png" />
-					<img src="../../img/icon_weixin.png" />
+					<img src="../../assets/imgs/icon/icon_weibo.png" />
+					<img src="../../assets/imgs/icon/icon_qq.png" />
+					<img src="../../assets/imgs/icon/icon_weixin.png" />
 				</div>
 			</div>
 			
 			<div class="article_more">
 				<p class="article_title">你可能感兴趣的文章</p>
 				<div class="article_box">
-					<img src="../../img/tabIcon.png">
+					<img src="../../assets/imgs/icon/tabIcon.png">
 					<P>Mac上隐藏了许多实用的功能,只有这样才能打开</P>
 				</div>
 				<div class="article_box">
-					<img src="../../img/tabIcon.png">
+					<img src="../../assets/imgs/icon/tabIcon.png">
 					<P>Mac上隐藏了许多实用的功能,只有这样才能打开</P>
 				</div>
 				<div class="article_box">
-					<img src="../../img/tabIcon.png">
+					<img src="../../assets/imgs/icon/tabIcon.png">
 					<P>Mac上隐藏了许多实用的功能,只有这样才能打开</P>
 				</div>
 				<div class="article_box">
-					<img src="../../img/tabIcon.png">
+					<img src="../../assets/imgs/icon/tabIcon.png">
 					<P>Mac上隐藏了许多实用的功能,只有这样才能打开</P>
 				</div>
 				<div class="article_box">
-					<img src="../../img/tabIcon.png">
+					<img src="../../assets/imgs/icon/tabIcon.png">
 					<P>Mac上隐藏了许多实用的功能,只有这样才能打开</P>
 				</div>
 				<div class="article_box">
-					<img src="../../img/tabIcon.png">
+					<img src="../../assets/imgs/icon/tabIcon.png">
 					<P>Mac上隐藏了许多实用的功能,只有这样才能打开</P>
 				</div>
 			</div>
@@ -218,7 +218,7 @@
 		color: #656565;
 		li{
 			margin-left: -0.5rem;
-			list-style: disc url('../../img/c_c.png');
+			list-style: disc url('../../assets/imgs/icon/c_c.png');
 		}
 	}
 	
