@@ -1,6 +1,6 @@
 <template>
 	<div class="loginContent">
-		<Header-top></Header-top>
+		<Header-top class="container_wrap"></Header-top>
 		<div class="mail_main">
 			 <div class="mail_register">
 				<h3>账号密码登录</h3>
@@ -46,7 +46,6 @@
             var loginContent = document.querySelector('.loginContent');
             // console.log(window.innerHeight);
             loginContent.style.height = window.innerHeight-80 + 'px';
-            console.log(loginContent.style.height)
         },
 		methods: {
 			login: function(event){

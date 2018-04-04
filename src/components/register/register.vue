@@ -45,8 +45,7 @@
 		mounted(){
             var loginContent = document.querySelector('.loginContent');
             // console.log(window.innerHeight);
-            loginContent.style.height = window.innerHeight-80 + 'px';
-            console.log(loginContent.style.height);     
+            loginContent.style.height = window.innerHeight-80 + 'px';    
         },
 		methods:{
 				

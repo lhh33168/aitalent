@@ -89,14 +89,8 @@
 					</router-link>
 				</div>
 			</div>
-			
-			<el-pagination
-				  background
-				  layout="prev, pager, next"
-				  :total="1000">
-			</el-pagination>
-		</div>
-		
+			<pagination :cur="data.cur" :all="data.all" @click="listen(data.cur)"></pagination>
+		</div>	
 		<Suspended></Suspended>
 	</div>
 </template>
@@ -107,6 +101,11 @@
 	export default{
 		data(){
 			return{
+				data: {
+	                cur: 1,
+	                all: 100,
+	                msg: ''
+	            },
 				kpin:{
 					domainList:[
 						{name:'全部', id:0},
@@ -161,6 +160,9 @@
 			Suspended
 		},
 		methods:{
+			listen(data) {
+                    data.msg = '当前页码：' + data
+            },
 			changeSelect(index){
 				this.personTabIndex = index;
 			},

@@ -63,31 +63,31 @@
 <style>
 	.footer_box{
 		width: 100%;
-		min-height: 11rem;
+		min-height: 320px;
 		margin: 0 auto;
 		background: #333333;
 		color: #C3C3C3;
 		clear: both;
 	}
 	.footer_content .footer_logo{
-		height: auto;
-		padding: 0.8rem 0;
-		line-height: 1.2;
-		font-size:1.5rem;
+		height: 60px;
+		padding: 17px 0;
+		line-height: 26px;
+		font-size:26px;
 		color: #FFFFFF;
 		font-weight: bold;
 	}
 	.footer_logo .logo_img{
 		width: 10rem;
 		float: right;
-		margin-top: 0.3rem;
+		margin-top: 3px;
 	}
 	
 	.footer_content .footer_main{
 		width: 100%;
-		height: 10.5rem;
-		font-size: 0.9rem;
-		padding: 0.5rem 0;
+		height: 210px;
+		font-size: 13px;
+		padding: 10px 0;
 		border-top:1px solid #454545;
 		border-bottom: 1px solid #454545;
 	}
@@ -99,7 +99,7 @@
 	.main_list{
 		display: inline-block;
 		height: 5.2rem;
-		padding: 0.2rem 1.5rem;
+		padding: 4px 30px;
 		text-align: center;
 	}
 	.main_list:nth-child(1){
@@ -107,10 +107,11 @@
 	}
 	.main_list .title{
 		color: #FFFFFF;
-		margin-bottom: 0.8rem;
+		margin-bottom: 16px;
+		font-size: 15px;
 	}
 	.main_list p{
-		margin: 0.5rem 0;
+		margin: 10px 0;
 	}
 	.client_list{
 		float: left;
@@ -119,31 +120,27 @@
 	
 	.client_list .client_p{
 		color: #FFFFFF;
-		padding: 0.7rem 0;
-		padding-left: 7.5rem;
+		padding: 14px 0;
+		padding-left: 169px;
+		font-size: 15px;
 	}
 	
 	.client_list .imgDiv_list{
 		float: right;
-		margin-right: -0.5rem;
+		margin-right: -10px;
 	}
-	.client_list p{
-		padding: 0.15rem;
-	}
-	
 	.client_list .img_list{
-		width: 5.5rem;
-		padding: 0.5rem 0.5rem;
-		/*height: 1.3rem;*/
+		width: 110px;
+		padding: 10px ;
 	}
 	
 	.footer_brand{
 		clear: both;
 		width: 100%;
-		height: 2.5rem;
-		padding-top: 0.5rem;
+		height: 50px;
+		line-height: 50px;
 		text-align: center;
-		font-size: 0.8rem;
+		font-size: 14px;
 	}
 	
 </style>

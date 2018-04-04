@@ -1,6 +1,6 @@
 $container:1200px;
 $color:#DB3962;
-$mainColor:#fff;
+$mainColor:#e23b3a;
 body{height:100%;}
 html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img,input {
   margin: 0;
@@ -33,6 +33,9 @@ img,input,fieldset,button {
   padding: 0;
   margin: 0;
   outline-style: none;
+}
+input{
+  border: 1px solid #ddd;
 }
 h1,h2,h3,h4,h5,h6 {
   font-weight: normal;

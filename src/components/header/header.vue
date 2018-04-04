@@ -10,26 +10,15 @@
 				<div class="collapse">
 					<ul class="navbar-list">
 						<li  v-for="(item,index) in tabList" :class="{active:index == tabIndex}" @click="changeSelect(index,item.toHref)" @mouseenter="changeSelect1(index,item.toHref)"   @mouseleave="changeSelect2(index,item.toHref)" ref="tab">
-							<!-- <el-button v-popover:popover1 class="nav-item">{{item.name}}</el-button> -->
 							 <span class="nav-item">{{item.name}}</span> 
 							 <transition name="fade">
-								 <ul v-if="item.toHref=='personCenter' && show" class="navbar-list2" ref="mybox">
-								 		<div id="triangle-down"></div>
-								 		<li v-for="(item2,index) in tabList2">{{item2.name}}</li>
-								 </ul>
-								 <ul v-if="item.toHref=='HigherUpsWill' && show" class="navbar-list2" ref="mybox">
-								 		<div id="triangle-down"></div>
-								 		<li v-for="(item3,index) in tabList3">{{item3.name}}</li>
-								 </ul>
+									 <ul v-if="item.name=='AI高校俱乐部'" class="navbar-list2" ref="mybox">
+									 		<li v-for="(item2,index) in tabList2" ><span @click.stop="changeSelect(index=2,item2.toHref)">{{item2.name}}</span></li>
+									 </ul>
+									 <ul v-if="item.name=='AI大咖会'" class="navbar-list3" ref="mybox">
+									 		<li v-for="(item3,index) in tabList3"><span @click.stop="changeSelect(index=3,item3.toHref)">{{item3.name}}</span></li>
+									 </ul>
    							 </transition>
-							<!--  <el-popover
-								  ref="popover1"
-								  placement="bottom"
-								  title="标题"
-								  width="200"
-								  trigger="hover"
-								  content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
-							</el-popover> -->
 						</li>	
 					</ul>
 				</div>
@@ -56,14 +45,14 @@
 				tabList:[
 					{name:'AI资讯', toHref:'message'},
 					{name:'AI快聘', toHref:'kpin'},
-					{name:'AI高校俱乐部', toHref:'personCenter'},
+					{name:'AI高校俱乐部'},
 					{name:'AI大咖会', toHref:'HigherUpsWill'},
 				],
 				tabIndex:0,
 				tabList2:[
-					{name:'关于俱乐部', toHref:'officialVer'},
-					{name:'学员服务', toHref:'Studen'},
-					{name:'AI学院', toHref:'college'},
+					{name:'关于俱乐部', toHref:'collegeclubs'},
+					{name:'学员服务', toHref:'students'},
+					{name:'AI学院', toHref:'AIcollege'},
 					{name:'课程报名', toHref:'ApplicationForm'},
 					{name:'俱乐部资讯库', toHref:'ClubLibrary'},
 				],
@@ -73,7 +62,6 @@
 					{name:'AI学院', toHref:'college'},
 					{name:'议题提交', toHref:'ApplicationForm'},
 				],
-				show:false
 			}
 		},
 		computed:{
@@ -87,6 +75,26 @@
 	        if(userJsonStr){
 	              var  presentTabIndex = JSON.parse(userJsonStr);
 	              this.tabIndex =  presentTabIndex.tabIndex;
+	        }
+        },
+        mounted(){
+        	// console.log(this.$refs.tab[0].classList.length)
+        	var userJsonStr = sessionStorage.getItem('userInfo');
+	        if(userJsonStr){
+	              var  presentTabIndex = JSON.parse(userJsonStr);
+	              this.tabIndex =  presentTabIndex.tabIndex;
+	        }
+        	for(var i=0;i<this.tabList.length;i++){
+        		if(this.$refs.tab[i].classList){
+        			this.$refs.tab[i].classList.remove("active");
+        		}	
+        	}
+        	if(presentTabIndex.tabIndex && presentTabIndex.tabIndex != 100){
+        		this.$refs.tab[this.tabIndex].classList.add('active');	
+        	}else if(presentTabIndex.tabIndex === 100){
+		        	  return;
+	        }else{
+	        	  this.$refs.tab[0].classList.add("active");
 	        }
         },
 		methods:{
@@ -105,35 +113,31 @@
 			},
 			changeSelect1(index,name){
 				/*this.$store.commit('CHANGETAB',index);*/
-				for(var i=0;i<4;i++){
-					this.$refs.tab[i].classList.remove("active");
+				for(var i=0;i<this.tabList.length;i++){
+					if(this.$refs.tab[i].classList){
+	        			this.$refs.tab[i].classList.remove("active");
+	        		}	
 				}
 				this.tabIndex = index;
 				this.$refs.tab[index].classList.add("active");
-				if(name=="personCenter"){
-					// this.animate(this.$refs.mybox,{top:10}) 
-					this.show = true
-				}
-				
 			},
 			changeSelect2(index,name){
 				/*this.$store.commit('CHANGETAB',index);*/
 				var userJsonStr = sessionStorage.getItem('userInfo');
-				for(var i=0;i<4;i++){
-					this.$refs.tab[i].classList.remove("active");
+				var presentTabIndex = JSON.parse(userJsonStr);
+				for(var i=0;i<this.tabList.length;i++){
+					if(this.$refs.tab[i].classList){
+						this.$refs.tab[i].classList.remove("active");
+					}
 				}
-		        if(userJsonStr){
-		              var  presentTabIndex = JSON.parse(userJsonStr);
+		        if(presentTabIndex.tabIndex && presentTabIndex.tabIndex != 100){
 		              this.$refs.tab[presentTabIndex.tabIndex].classList.add("active");
+		        }else if(presentTabIndex.tabIndex === 100){
+		        	  return;
 		        }else{
 		        	  this.$refs.tab[0].classList.add("active");
 		        }
-				//console.log(this.$refs.tab[index],index,this.tabIndex)
-				if(name=="personCenter"){
-					// this.animate(this.$refs.mybox,{top:10}) 
-					this.show = true
-				}
-				
+				// console.log(this.$refs.tab[index],index,this.tabIndex)	
 			},
 			// changeSelect2(index,name){
 			// 	this.$store.commit('CHANGETAB',index);
@@ -142,7 +146,7 @@
 			register:function(){
 				this.$store.state.login.register_type = 1;
 				this.$store.state.footer.footer = false;
-				this.tabIndex=null;
+				this.tabIndex = 100;
 				window.sessionStorage.setItem('userInfo', JSON.stringify(
 			            {
 			               'tabIndex': this.tabIndex,
@@ -154,7 +158,7 @@
 			login:function(){
 				this.$store.state.login.register_type = 1;
 				this.$store.state.footer.footer = false;
-				this.tabIndex=null;
+				this.tabIndex = 100;
 				window.sessionStorage.setItem('userInfo', JSON.stringify(
 			            {
 			               'tabIndex': this.tabIndex,
@@ -211,6 +215,7 @@
 		height: 80px;
 		margin:0;
 		cursor:pointer;
+		position:relative;
 		li{
 			display: inline-block;
 			height: 80px;
@@ -228,7 +233,9 @@
 			cursor:pointer;
 		}
 	}
-	
+	.navbar-list>li{
+		position:relative;
+	}
 	.login_register{
 		width: 25%;
 		height: 80px;
@@ -243,29 +250,49 @@
 			margin-top: -10px;
 		}
 	}
-	#triangle-down {
-	    width: 0;
-	    height: 0;
-	    border-left: 5px solid transparent;
-	    border-right: 5px solid transparent;
-	    border-bottom: 10px solid #fff;
-	    position:absolute;
-	    top:-10px;
-	    left:67px;
-	}
 	.navbar-list2{
-		display:none;
-		height:auto;
-		background:#fff;
+		height:0;
+		background:url('../../assets/imgs/tabmenu/xl_julebu.png');
 		color:#000;
 		width:140px;
 		position:absolute;
 		left:-15px;
-		border-radius: 3px;
+		border-radius: 8px;
 		padding:12px 20px;
-		margin-top:10px;
-		border:1px solid #ddd;
-		// opacity:0;
+		border-bottom:1px solid #ddd;
+		-webkit-transition:all 0.5s; 
+		-moz-transition:all 0.5s; 
+		-o-transition:all 0.5s; 
+		opacity:0;
+		li{
+			width:100%;
+			height:35px;
+			text-align:center;
+			font-size:16px;
+			color:#333333;
+			line-height:35px;
+		}
+	}
+	.navbar-list2>li:hover span{
+		color: #e23b3a;
+	}
+	.navbar-list3>li:hover span{
+		color: #e23b3a;
+	}
+	.navbar-list3{
+		height:0;
+		background:url('../../assets/imgs/tabmenu/xl_dakahui.png');
+		color:#000;
+		width:140px;
+		position:absolute;
+		left:-32px;
+		border-radius: 8px;
+		padding:12px 20px;
+		border-bottom:1px solid #ddd;
+		-webkit-transition:all 0.5s; 
+		-moz-transition:all 0.5s; 
+		-o-transition:all 0.5s; 
+		opacity:0;
 		li{
 			width:100%;
 			height:35px;
@@ -276,7 +303,12 @@
 		}
 	}
 	.active:hover .navbar-list2{
-		display:block;
+		height:200px;
+		opacity:1;
+	}
+	.active:hover .navbar-list3{
+		height:165px;
+		opacity:1;
 	}
 	// .fade-enter-active{animation: fade-in .5s;}
 
@@ -296,7 +328,7 @@
     //     to{opacity: 0;}
     // }
 	.active{
-		position:relative;
+		// position:relative;
 		font-size: 18px;
 		color: #e23b3a;
 		.nav-item{
