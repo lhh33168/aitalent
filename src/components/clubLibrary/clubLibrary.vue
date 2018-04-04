@@ -22,10 +22,10 @@
 			data(){
 				return{
 					tablist:[
-						{name:'俱乐部知识', toHref:'Trainingcourses',imgurl:require('../../assets/imgs/icon/icon_julebu_zixun_zhishi.png'),content:'培训课程着重点以及课程介绍'},
-						{name:'俱乐部最新资讯', toHref:'kpin',imgurl:require('../../assets/imgs/icon/icon_julebu_zixun_zixun.png'),content:'学习时间以及课程时长等'},
-						{name:'实习职位信息', toHref:'personCenter',imgurl:require('../../assets/imgs/icon/icon_julebu_zixun_shixi.png'),content:'大批优秀讲师为您授课'},
-						{name:'俱乐部调研', toHref:'HigherUpsWill',imgurl:require('../../assets/imgs/icon/icon_julebu_zixun_diaoyan.png'),content:'特训服务介绍'},
+						{name:'俱乐部知识', toHref:'clubKnowledge',imgurl:require('../../assets/imgs/icon/icon_julebu_zixun_zhishi.png'),content:'培训课程着重点以及课程介绍'},
+						{name:'俱乐部最新资讯', toHref:'latestNews',imgurl:require('../../assets/imgs/icon/icon_julebu_zixun_zixun.png'),content:'学习时间以及课程时长等'},
+						{name:'实习职位信息', toHref:'internshipInformation',imgurl:require('../../assets/imgs/icon/icon_julebu_zixun_shixi.png'),content:'大批优秀讲师为您授课'},
+						{name:'俱乐部调研', toHref:'clubResearch',imgurl:require('../../assets/imgs/icon/icon_julebu_zixun_diaoyan.png'),content:'特训服务介绍'},
 					],
 				}
 			},

@@ -310,23 +310,7 @@
 		height:165px;
 		opacity:1;
 	}
-	// .fade-enter-active{animation: fade-in .5s;}
-
- //    // .fade-leave-active{animation: fade-out .5s;}
-
- //    @keyframes fade-in{
- //        from{
- //            opacity: 0;
- //        }
- //        to{
- //            opacity: 1;
- //        }
- //    }
-
-    // @keyframes fade-out{
-    //     from{opacity: 1;}
-    //     to{opacity: 0;}
-    // }
+	
 	.active{
 		// position:relative;
 		font-size: 18px;

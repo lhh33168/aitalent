@@ -12,7 +12,12 @@ import ArtDetail from '../components/message/article_detail.vue'
 import KpinDetail from '../components/kpin/kpin_detail.vue'
 import Collegeclubs from '../components/collegeClubs/collegeClubs.vue'
 import Student from '../components/students/students.vue'
+
 import ClubLibrary from '../components/clubLibrary/clubLibrary.vue'
+import clubKnowledge from '../components/clubLibrary/clubKnowledge.vue'
+import clubResearch from '../components/clubLibrary/clubResearch.vue'
+import internshipInformation from '../components/clubLibrary/internshipInformation.vue'
+import latestNews from '../components/clubLibrary/latestNews.vue'
 
 import ApplicationForm from '../components/applicationForm/applicationForm.vue'
 import classRecordsAndCourseEnquiries from '../components/applicationForm/classRecordsAndCourseEnquiries.vue'
@@ -65,6 +70,10 @@ const router = new VueRouter({
                 {path:'/courseOverview',name: 'courseOverview',component: courseOverview},
                 {path:'/paymentConfirmationAndRecordEnquiry',name: 'paymentConfirmationAndRecordEnquiry',component: paymentConfirmationAndRecordEnquiry},
                 {path:'/ClubLibrary',name: 'ClubLibrary',component: ClubLibrary},
+                {path:'/clubKnowledge',name: 'clubKnowledge',component: clubKnowledge},
+                {path:'/clubResearch',name: 'clubResearch',component: clubResearch},
+                {path:'/internshipInformation',name: 'internshipInformation',component: internshipInformation},
+                {path:'/latestNews',name: 'latestNews',component: latestNews},
                 {path:'/Trainingcourses',name: 'Trainingcourses',component: Trainingcourses},
                 {path:'/Progressionandtime',name: 'Progressionandtime',component: Progressionandtime},
                 {path:'/Speciallytrainedservice',name: 'Speciallytrainedservice',component: Speciallytrainedservice},

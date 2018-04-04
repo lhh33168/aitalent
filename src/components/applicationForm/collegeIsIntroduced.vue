@@ -71,9 +71,12 @@
     }
 </script>
 <style lang="scss" scoped>
+		.collegeIsIntroduced{
+			margin-top: 80px;
+		}
 		.collegeIsIntroduced .container_wrap{
-				font-size: 14px;
-			}
+			font-size: 14px;
+		}
 		.collegeIsIntroduced h2{
 			margin-bottom:30px;
 		}

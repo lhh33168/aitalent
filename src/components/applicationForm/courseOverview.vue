@@ -72,6 +72,7 @@
 </script>
 <style>
 		.courseOverview .container_wrap{
+			margin-top: 80px;
 			font-size: 14px;
 		}
 		.courseOverview h2{

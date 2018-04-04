@@ -13,7 +13,7 @@
     	mounted(){
             var courseOverview = document.querySelector('.courseOverview .container_wrap');
             // console.log(window.innerHeight);
-            courseOverview.style.height = window.innerHeight-625 + 'px';    
+            courseOverview.style.height = window.innerHeight-705 + 'px';    
         },
         components: {
             datagrid
@@ -21,8 +21,10 @@
     }
 </script>
 <style>
+		.courseOverview{
+			margin-top: 80px;
+		}
 		.courseOverview .container_wrap{
-			height:100%;
 			font-size: 14px;
 		}
 		.courseOverview h2{
