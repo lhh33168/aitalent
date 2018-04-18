@@ -1,7 +1,7 @@
 <template>
 		<div class="ApplicationForm">
 			<div class="ApplicationForm_imgContent">
-				<img src="../../assets/imgs/icon/banner_julebu_top.jpg" class="personal_backImg" />
+				<div class="personal_backImg"></div>
 			</div>
 			<div class="container_wrap">
 				<h1>课程报名</h1>

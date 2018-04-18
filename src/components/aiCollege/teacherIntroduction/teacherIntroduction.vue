@@ -1,7 +1,7 @@
 <template>
 		<div class="TeacherIntroduction">
 			<div class="TeacherIntroduction_imgContent">
-				<img src="../../../assets/imgs/icon/banner_julebu_top.jpg" class="personal_backImg" />
+				<div class="personal_backImg"></div>
 			</div>
 			<div class="container_wrap">
 				<h1>讲师介绍</h1>

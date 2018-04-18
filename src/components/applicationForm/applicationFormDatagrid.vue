@@ -1,7 +1,7 @@
 <template>
 		<div class="applicationFormDatagrid">
 			<div class="applicationFormDatagrid_imgContent">
-				<img src="../../assets/imgs/icon/banner_julebu_top.jpg" class="personal_backImg" />
+				<div class="personal_backImg"></div>
 			</div>
 		</div>
 </template>

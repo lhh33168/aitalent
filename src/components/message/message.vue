@@ -5,7 +5,7 @@
 			<div class="swiper-container">
 				  <div class="swiper-wrapper">
 					    <div class="swiper-slide">
-					    	<img class="swiper_bannerImg" src="../../assets/imgs/icon/banner.png" />
+					    	<img class="swiper_bannerImg" src="../../assets/imgs/icon/banner.png"/>
 					    	<div class="swiper_shade">
 					    		<p>阿里8.6亿美元再押ofo,创始人戴维如何打好下一场硬战?</p>
 					    	</div>
@@ -39,7 +39,7 @@
 						<p>阿里阿里阿里阿里阿里阿里阿里阿里阿里阿里阿里阿里阿里?</p>
 					</div>
 					<router-link :to="{name:'artDetail',params:{id:index}}">
-						<img class="tabIcon" src="../../assets/imgs/icon/tabIcon.png" />
+						<img class="tabIcon" :src="a"/>
 					</router-link>
 				</div>
 			</div>
@@ -147,7 +147,7 @@
 			</div>
 			
 			<div class="hot_article">
-				<h3>热门职位</h3>
+				<h3>热门文章</h3>
 				<div class="hot_main">
 					<p>
 						<img class="cover_img" src="../../assets/imgs/icon/icon_top1.png" />
@@ -196,6 +196,7 @@
 </template>
 
 <script>
+	import fliterUrl from '../../utils/baseUrl'
 	import { Swiper, swiperSlide } from 'vue-awesome-swiper';
     import Suspended from '../../components/suspended/suspended.vue';
 	export default{
@@ -206,11 +207,14 @@
 					{name:'本周热点'},
 					{name:'阅读精选'}
 				],
-				wordTab_type:0
+				wordTab_type:0,
+				a:''
 			}
 		},
 		mounted() {
             this.mySwiper();
+            this.a = fliterUrl.fliterUrl('img/tabIcon.063e0d5.png')
+            console.log(fliterUrl.fliterUrl('img/tabIcon.063e0d5.png'))
       	},
       	components:{
       		Suspended

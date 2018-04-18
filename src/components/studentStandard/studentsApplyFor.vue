@@ -1,6 +1,6 @@
 <template>
 		<div class="Thesecondorderstudents">
-			<div class="container_wrap">
+			<div>
 				<div class="ThesecondorderstudentsContainer">
 					<h3>学员申请</h3>
 					<label for="">姓名：</label><input type="text" placeholder="请输入您的姓名">

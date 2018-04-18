@@ -1,7 +1,7 @@
 <template>
 		<div class="internshipInformation">
 			<div class="internshipInformation_imgContent">
-				<img src="../../assets/imgs/icon/banner_julebu_top.jpg" class="personal_backImg" />
+				<div class="personal_backImg"></div>
 			</div>
 			<div class="container_wrap">
 				<h1>实习职位</h1>
@@ -76,6 +76,13 @@
 		.internshipInformation{
 			.Paging{
 				padding:30px 0 50px; 
+			}
+			margin-top:80px;
+			.personal_backImg{
+				height:300px;
+				background:url('../../assets/imgs/icon/banner_julebu_top.jpg') no-repeat;
+				background-position:center;
+				background-size:cover;
 			}
 			h1{
 				font-size:18px;

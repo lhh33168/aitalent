@@ -1,4 +1,11 @@
 .Studendatagrid{
+		margin-top:80px;
+		.personal_backImg{
+			height:300px;
+			background:url('../../assets/imgs/icon/banner_julebu_top.jpg') no-repeat;
+			background-position:center;
+			background-size:cover;
+		}
 		ul{
 			width:160px;
 			background: #f6f6f6;

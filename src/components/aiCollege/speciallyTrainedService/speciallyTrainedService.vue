@@ -1,7 +1,7 @@
 <template>
 		<div class="Speciallytrainedservice">
 			<div class="Speciallytrainedservice_imgContent">
-				<img src="../../../assets/imgs/icon/banner_julebu_top.jpg" class="personal_backImg" />
+				<div class="personal_backImg"></div>
 			</div>
 			<div class="container_wrap">
 				<h1>特训服务</h1>

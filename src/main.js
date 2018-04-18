@@ -9,7 +9,7 @@ import Vue from 'vue'
 import store from './vuex/store'
 import router from './router'
 import App from './App.vue'
-
+import fliterUrl from './utils/baseUrl'
 Vue.use(VueAwesomeSwiper)
 Vue.use(ElementUI, { size: 'samll' })
 // Vue.directive('datepicker', {

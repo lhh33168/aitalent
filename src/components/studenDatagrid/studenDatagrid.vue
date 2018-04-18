@@ -1,9 +1,9 @@
 <template>
 		<div class="Studendatagrid">
 			<div class="Studendatagrid_imgContent">
-				<img src="../../assets/imgs/icon/banner_julebu_top.jpg" class="personal_backImg" />
+				<div class="personal_backImg"></div>
 			</div>
-			<div class="container_wrap clearfix" style="height:800px;">
+			<div class="container_wrap clearfix" style="height:1000px;">
 				<ul class="fl">
 					<li  v-for="(item,index) in alllabels" @click="changeSelect(index,columns[index])"  @mouseenter="changeSelect1(index,columns[index])"  @mouseleave="changeSelect2(index,columns[index])" ><span :class="{active:index == tabIndexstu}" ref="tab">{{item}}</span></li>
 				</ul>

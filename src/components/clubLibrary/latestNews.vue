@@ -1,7 +1,7 @@
 <template>
 		<div class="latestNews">
 			<div class="latestNews_imgContent">
-				<img src="../../assets/imgs/icon/banner_julebu_top.jpg" class="personal_backImg" />
+				<div class="personal_backImg"></div>
 			</div>
 			<div class="container_wrap">
 				<h1>俱乐部最新资讯</h1>
@@ -66,6 +66,13 @@
 		.latestNews{
 			.Paging{
 				padding:30px 0 80px; 
+			}
+			margin-top:80px;
+			.personal_backImg{
+				height:300px;
+				background:url('../../assets/imgs/icon/banner_julebu_top.jpg') no-repeat;
+				background-position:center;
+				background-size:cover;
 			}
 			h1{
 				font-size:18px;

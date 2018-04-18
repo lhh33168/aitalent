@@ -1,7 +1,7 @@
 <template>
 		<div class="ClubLibrary">
 			<div class="ClubLibrary_imgContent">
-				<img src="../../assets/imgs/icon/banner_julebu_top.jpg" class="personal_backImg" />
+				<div class="personal_backImg"></div>
 			</div>
 			<div class="container_wrap">
 				<h1>俱乐部资讯库</h1>

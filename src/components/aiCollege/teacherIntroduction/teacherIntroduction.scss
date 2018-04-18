@@ -1,5 +1,11 @@
 .TeacherIntroduction{
 	margin-top:80px;
+	.personal_backImg{
+		height:300px;
+		background:url('../../../assets/imgs/icon/banner_julebu_top.jpg') no-repeat;
+		background-position:center;
+		background-size:cover;
+	}
 	.container_wrap{
 		margin-bottom:50px;
 		h1{

@@ -1,7 +1,7 @@
 <template>
 		<div class="AIcollege">
 			<div class="AIcollege_imgContent">
-				<img src="../../assets/imgs/icon/banner_julebu_top.jpg" class="personal_backImg" />
+				<div class="personal_backImg"></div>
 			</div>
 			<div class="container_wrap">
 				<h1>AI学院</h1>

@@ -1,6 +1,6 @@
 <template>
 		<div class="Thefirstorderstudents">
-			<div class="container_wrap">
+			<div>
 				<h1>一阶学员</h1>
 				<h2>一、培训课程设计和开发的策划</h2>
 				<p>

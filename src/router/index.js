@@ -47,6 +47,11 @@ import Firstorderstudentwelfare from '../components/studentWelfare/Firstorderstu
 import Secondorderstudentwelfare from '../components/studentWelfare/Secondorderstudentwelfare.vue'
 import cultivateswelfare from '../components/studentWelfare/cultivateswelfare.vue'
 
+import greatCoffee from '../components/greatCoffee/greatCoffee.vue'
+import forumNotice from '../components/forumNotice/forumNotice.vue'
+import submitTicket from '../components/submitTicket/submitTicket.vue'
+import pastEvents from '../components/pastEvents/pastEvents.vue'
+
 Vue.use(VueRouter)
 
 const router = new VueRouter({
@@ -78,6 +83,10 @@ const router = new VueRouter({
                 {path:'/Progressionandtime',name: 'Progressionandtime',component: Progressionandtime},
                 {path:'/Speciallytrainedservice',name: 'Speciallytrainedservice',component: Speciallytrainedservice},
                 {path:'/TeacherIntroduction',name: 'TeacherIntroduction',component: TeacherIntroduction},
+                {path:'/greatCoffee',name: 'greatCoffee',component: greatCoffee},
+                {path:'/forumNotice',name: 'forumNotice',component: forumNotice},
+                {path:'/submitTicket',name: 'submitTicket',component: submitTicket},
+                {path:'/pastEvents',name: 'pastEvents',component: pastEvents},
                 {path:'/Studentserviceinformation',name: 'Studentserviceinformation',component: Studentserviceinformation,redirect:'/TrainingServices',
                 children:[
                         {path:'/TrainingServices',name: 'TrainingServices',component: TrainingServices},

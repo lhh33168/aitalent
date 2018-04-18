@@ -3,9 +3,9 @@
 		<div class="header_box container_wrap">
 			<div class="navbar clearfix">
 				<div class="navbar_logo">
-					<router-link class="navbar-logo" to="message">
+					<a @click="changeSelect(index=0)" style="cursor:pointer;">
 						<img class="logoCss" src="../../assets/imgs/icon/logo_r.png">
-					</router-link>
+					</a>
 				</div>	
 				<div class="collapse">
 					<ul class="navbar-list">
@@ -24,11 +24,11 @@
 				</div>
 				<div class="login_register">
 					<div @click="register">
-						<p></p><img src="../../assets/imgs/icon/icon_s.png" /></p>
-						<p class="wordState"></p>注册</p>
+						<!-- <p></p><img src="../../assets/imgs/icon/icon_s.png" /></p> -->
+						<p class="wordState">注册</p>
 					</div>
 					<div @click="login">
-						<p><img src="../../assets/imgs/icon/icon_log.png" /></p>
+						<!-- <p><img src="../../assets/imgs/icon/icon_log.png" /></p> -->
 						<p class="wordState">登录</p>
 					</div>
 				</div>
@@ -46,9 +46,9 @@
 					{name:'AI资讯', toHref:'message'},
 					{name:'AI快聘', toHref:'kpin'},
 					{name:'AI高校俱乐部'},
-					{name:'AI大咖会', toHref:'HigherUpsWill'},
+					{name:'AI大咖会'},
 				],
-				tabIndex:0,
+				tabIndex:3,
 				tabList2:[
 					{name:'关于俱乐部', toHref:'collegeclubs'},
 					{name:'学员服务', toHref:'students'},
@@ -57,10 +57,10 @@
 					{name:'俱乐部资讯库', toHref:'ClubLibrary'},
 				],
 				tabList3:[
-					{name:'大咖会介绍', toHref:'officialVer'},
-					{name:'参会须知', toHref:'Studen'},
-					{name:'AI学院', toHref:'college'},
-					{name:'议题提交', toHref:'ApplicationForm'},
+					{name:'大咖会介绍', toHref:'greatCoffee'},
+					{name:'参会须知', toHref:'forumNotice'},
+					{name:'议题提交', toHref:'submitTicket'},
+					{name:'往期回顾', toHref:'pastEvents'},
 				],
 			}
 		},
@@ -109,7 +109,13 @@
 			               'tabIndex': index,
 			            }
 		          ));
-				this.$router.push({path: name});
+				if(index==0){
+					location.href='/';
+				}else if(index==1){
+					location.href='/plus/list.php?channelid=-8';
+				}else{
+					this.$router.push({path: name});
+				}	
 			},
 			changeSelect1(index,name){
 				/*this.$store.commit('CHANGETAB',index);*/
@@ -153,7 +159,8 @@
 			            }
 		          ));
 				this.$store.state.header.tabIndexFoot = this.tabIndex;
-				this.$router.push({ path: 'register' })
+				// this.$router.push({ path: 'register' })
+				location.href='/member/index_do.php?fmdo=user&dopost=regnew'
 			},
 			login:function(){
 				this.$store.state.login.register_type = 1;
@@ -165,7 +172,8 @@
 			            }
 		          ));
 				this.$store.state.header.tabIndexFoot = this.tabIndex;
-				this.$router.push({ path: 'login' })
+				// this.$router.push({ path: 'login' })
+				location.href='/member'
 			}	
 		}
 	}
@@ -246,16 +254,17 @@
 			float: right;
 			cursor:pointer;
 		}
-		.wordState{
-			margin-top: -10px;
+		.wordState {
+			 line-height: 80px;
+			 margin-left:10px;
 		}
 	}
 	.navbar-list2{
-		height:0;
 		background:url('../../assets/imgs/tabmenu/xl_julebu.png');
 		color:#000;
 		width:140px;
 		position:absolute;
+		top:-120px;
 		left:-15px;
 		border-radius: 8px;
 		padding:12px 20px;
@@ -264,6 +273,7 @@
 		-moz-transition:all 0.5s; 
 		-o-transition:all 0.5s; 
 		opacity:0;
+		z-index:-1;
 		li{
 			width:100%;
 			height:35px;
@@ -275,16 +285,18 @@
 	}
 	.navbar-list2>li:hover span{
 		color: #e23b3a;
+		display:block;
 	}
 	.navbar-list3>li:hover span{
 		color: #e23b3a;
+		display:block;
 	}
 	.navbar-list3{
-		height:0;
 		background:url('../../assets/imgs/tabmenu/xl_dakahui.png');
 		color:#000;
 		width:140px;
 		position:absolute;
+		top:-85px;
 		left:-32px;
 		border-radius: 8px;
 		padding:12px 20px;
@@ -293,6 +305,7 @@
 		-moz-transition:all 0.5s; 
 		-o-transition:all 0.5s; 
 		opacity:0;
+		z-index:-1;
 		li{
 			width:100%;
 			height:35px;
@@ -303,11 +316,11 @@
 		}
 	}
 	.active:hover .navbar-list2{
-		height:200px;
+		top:80px;
 		opacity:1;
 	}
 	.active:hover .navbar-list3{
-		height:165px;
+		top:80px;
 		opacity:1;
 	}
 	

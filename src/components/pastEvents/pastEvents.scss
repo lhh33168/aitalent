@@ -1,0 +1,127 @@
+.pastEvents{
+	.pastEvents_imgContent{
+		height:300px;
+		.personal_backImg{
+			height:300px;
+			margin-top:80px;
+			background:url(../../assets/imgs/icon/banner_dakahui_top.jpg) no-repeat;
+			background-position: center;
+			background-size:cover;	
+		}
+	}
+	.container_wrap_pastEvents{
+		.pastEvents_left{
+			width:760px;
+			h2{
+				padding:30px 0;
+				font-weight:bold;
+				color:#333;
+				font-size:18px;
+				border-bottom:1px solid #ccc;
+			}
+			li{
+				padding:20px 0;
+				img{
+					width:280px;
+					height:180px;
+				}
+				div{
+					width:460px;
+					float:right;
+					h3{
+						font-size:24px;
+						color:#333;
+						font-weight:bold;
+					}
+					p{
+						margin-top:20px;
+						text-overflow: -o-ellipsis-lastline;
+					  	overflow: hidden;
+					  	text-overflow: ellipsis;
+					  	display: -webkit-box;
+					  	-webkit-line-clamp: 2;
+					  	-webkit-box-orient: vertical;
+					  	color:#c3c3c3;
+					  	font-size:18px;
+					}
+					span{
+						display:block;
+						color:#c3c3c3;
+						font-size:18px;
+						margin-top:30px;
+					}
+				}
+			}
+			.see_more{
+				height:50px;
+				width:150px;
+				margin:50px auto;
+				border-radius:6px;
+				color:#e23b3a;
+				border:1px solid #e23b3a;
+				text-align:center;
+				line-height:50px;
+			}
+		}
+		.pastEvents_right{
+			width:380px;
+			h2{
+				padding:30px 0;
+				text-align:center;
+				font-weight:bold;
+				color:#333;
+				font-size:18px;
+			}
+			.theme_ul {
+			  font-size: 17px;
+			  color: #656565;
+			  border-bottom:3px solid #e23b3a;
+			  li {
+					  background:url('../../assets/imgs/icon/c_c.png?1523412806')0 center no-repeat;
+					  padding:20px 0 20px 22px;
+				      border-bottom:1px dashed #ddd;
+				      line-height:25px;
+				      &:nth-child(1){
+				      	padding-top:0;
+				      	background-position:0 20px;
+				      }
+				      &:nth-child(3){
+				      	border-bottom:0 none;
+				      }
+				}
+
+			}
+			.Guests_ul {
+				.Guests_ul_li{
+					  width: 380px;
+					  padding: 10px;
+					  border-radius: 6px;
+					  border: 1px solid #DDDDDD;
+					  margin:50px 0 100px;
+					  position:relative;
+					  height:200px;
+					  	img{
+					  		height:90px;
+					  		width:90px;
+					  		border-radius:50%;
+					  		position:absolute;
+					  		top:-55px;
+					  		left:145px;
+					  	}
+						div {
+							  font-size: 18px;
+							  color: #333;
+							  font-weight:bold;
+							  text-align:center;
+							  padding:40px 0;
+						}
+						p {
+							  font-size: 14px;
+							  margin: 0 10px;
+							  color: #989898;
+						}
+				}
+			}
+		}
+	}
+}
